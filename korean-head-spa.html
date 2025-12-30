@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korean Head Spa & Scalp Detox | Mahi Beauty & Head Spa</title>
+    <title>Mahi Beauty & Head Spa | Houston's Premier Korean Head Spa & Advanced Skincare Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -27,35 +27,91 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', 'serif'; }
         .image-placeholder {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .service-overlap {
+            position: relative;
+        }
+        .service-image-overlap {
+            position: relative;
+            z-index: 1;
+        }
+        .service-text-overlap {
+            position: relative;
+            z-index: 2;
+            margin-top: -80px;
+            background: rgba(249, 248, 245, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        @media (max-width: 768px) {
+            .service-text-overlap {
+                margin-top: -40px;
+            }
         }
     </style>
 </head>
 <body class="bg-ivory text-deep-charcoal">
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ivory/90 backdrop-blur-sm border-b border-champagne-gold/10">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-6">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-10 w-10 md:h-12 md:w-12 object-contain">
-                    <span class="font-serif text-2xl font-light text-deep-charcoal">Mahi Beauty & Head Spa</span>
+                <a href="index.html" class="flex items-center space-x-3" id="nav-logo">
+                    <span class="font-serif text-2xl font-light text-ivory">Mahi Beauty & Head Spa</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Home</a>
-                    <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-champagne-gold">Head Spa</a>
-                    <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Skincare</a>
-                    <a href="about.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">About</a>
-                    <a href="booking.html" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book</a>
+                    <a href="index.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Home</a>
+                    <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Head Spa</a>
+                    <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Skincare</a>
+                    <a href="about.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">About</a>
+                    <a href="booking.html" id="nav-book-btn" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-ivory hover:bg-champagne-gold hover:text-deep-charcoal transition-all font-medium">Book</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
-                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
-                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
-                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-ivory transition-all"></span>
+                    <span class="w-6 h-px bg-ivory transition-all"></span>
+                    <span class="w-6 h-px bg-ivory transition-all"></span>
                 </button>
             </div>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-ivory border-t border-champagne-gold/10">
             <div class="px-4 py-6 space-y-4">
                 <a href="index.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Home</a>
@@ -67,191 +123,145 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Asymmetrical Layout -->
-    <section class="pt-24 pb-16 md:pt-32">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-0">
-            <div class="md:col-span-3 h-[60vh] md:h-[80vh] relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&h=800&fit=crop&q=80" alt="Korean Head Spa & Scalp Detox" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div class="image-placeholder w-full h-full hidden"></div>
-            </div>
-            <div class="md:col-span-2 flex items-center px-8 md:px-12 lg:px-16 py-12 md:py-0 bg-ivory relative -mt-12 md:mt-0 md:-ml-16 z-10">
-                <div>
-                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6 text-deep-charcoal leading-tight">
-                        Korean Head Spa & Scalp Detox
-                    </h1>
-                    <p class="text-lg text-deep-charcoal/70 mb-8 leading-relaxed">
-                        Experience the ultimate scalp revival with our luxurious head spa treatment. A transformative journey that detoxifies, refreshes, and revitalizes your scalp and hair.
-                    </p>
-                    <div class="space-y-4 mb-8">
-                        <p class="font-serif text-2xl text-champagne-gold">Starting at $167</p>
-                        <p class="text-deep-charcoal/60">75 minutes</p>
+    <!-- Hero Section with Background Image -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&h=1080&fit=crop&q=80" alt="Mahi Beauty & Head Spa" class="hero-video w-full h-full object-cover">
+        <!-- Dark Overlay -->
+        <div class="hero-overlay"></div>
+        <!-- Content -->
+        <div class="hero-content-wrapper w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8 text-ivory tracking-tight fade-in">
+                Houston's Premier Korean Head Spa <br class="hidden md:block"> Advanced Skincare Studio
+            </h1>
+            <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-ivory hover:bg-champagne-gold hover:text-deep-charcoal transition-all fade-in" style="animation-delay: 0.3s; animation-fill-mode: both;">
+                Book Your Experience
+            </a>
+        </div>
+    </section>
+
+    <!-- Choose Your Path Section -->
+    <section class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal text-center">Choose Your Path</h2>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Head Spa Rituals Card -->
+                <a href="korean-head-spa.html" class="group block">
+                    <div class="relative h-[500px] md:h-[600px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&h=800&fit=crop&q=80" alt="Head Spa Rituals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-placeholder w-full h-full hidden"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-deep-charcoal/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                            <h3 class="font-serif text-4xl md:text-5xl font-light mb-4 text-ivory">Head Spa Rituals</h3>
+                            <p class="text-ivory/90 text-lg mb-6">Experience the ultimate Korean scalp detox and transformation</p>
+                            <span class="text-sm uppercase tracking-wider text-champagne-gold border-b border-champagne-gold/50 group-hover:border-champagne-gold transition-colors inline-block">Explore Rituals →</span>
+                        </div>
                     </div>
-                    <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
-                        Book Now
-                    </a>
-                </div>
+                </a>
+
+                <!-- Advanced Skincare Artistry Card -->
+                <a href="advanced-skincare.html" class="group block">
+                    <div class="relative h-[500px] md:h-[600px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&h=800&fit=crop&q=80" alt="Advanced Skincare Artistry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-placeholder w-full h-full hidden"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-deep-charcoal/80 via-deep-charcoal/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                            <h3 class="font-serif text-4xl md:text-5xl font-light mb-4 text-ivory">Advanced Skincare Artistry</h3>
+                            <p class="text-ivory/90 text-lg mb-6">Transform your skin with Korean techniques and modern innovation</p>
+                            <span class="text-sm uppercase tracking-wider text-champagne-gold border-b border-champagne-gold/50 group-hover:border-champagne-gold transition-colors inline-block">Explore Artistry →</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- The Benefits Section -->
-    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-serif text-5xl md:text-6xl font-light mb-12 text-deep-charcoal">The Benefits</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Hair Growth & Health</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed mb-6">
-                        Unclogs hair follicles to promote faster, healthier hair growth. By removing build-up, dandruff, and dead skin cells, your scalp can breathe and your hair follicles can function optimally.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Stress Relief & Relaxation</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed mb-6">
-                        The soothing water fountain sounds and calming herbal infusion rinse create a serene, rejuvenating experience that releases tension and promotes deep relaxation.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Scalp Detoxification</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed mb-6">
-                        Deeply cleanses and detoxifies the scalp, removing product build-up, excess oil, and environmental pollutants that can weigh down your hair and irritate your scalp.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Improved Circulation</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed mb-6">
-                        The therapeutic scalp massage enhances blood circulation, bringing essential nutrients to your hair follicles and promoting overall scalp health.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The 5-Step Ritual -->
-    <section class="py-16 md:py-24 border-t border-champagne-gold/10 bg-ivory">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal">The 5-Step Ritual</h2>
-            <div class="space-y-12">
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="md:w-1/3">
-                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
-                            <span class="font-serif text-2xl text-champagne-gold">1</span>
+    <!-- Trust Bar / Boutique Difference -->
+    <section class="py-16 md:py-24 border-t border-b border-champagne-gold/10 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <!-- Left Column: Text Content -->
+                <div class="w-full lg:w-1/2 lg:pr-8">
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-12 text-deep-charcoal">The Boutique Difference</h2>
+                    <div class="grid md:grid-cols-3 lg:grid-cols-1 gap-8 md:gap-12">
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l2-2m-2 2l2 2m7-2l2 2m-2-2l2-2m-2 2l-2 2m2-2l-2-2M3 12l2 2m0 0l2 2m-2-2l-2-2m7 2l-2-2m2 2l2 2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Private Suite</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">An intimate, personalized experience in our exclusive boutique studio</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <span class="font-serif text-2xl text-champagne-gold">20+</span>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Years Experience</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">Two decades of mastery in Korean scalp and skin transformation</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V17a2 2 0 00-2-2h-2a2 2 0 00-2 2v1.469a3.374 3.374 0 00-1.172-1.122l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Korean Products</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">Medical-grade Korean formulations for unparalleled results</p>
                         </div>
                     </div>
-                    <div class="md:w-2/3">
-                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Scalp Analysis</h3>
-                        <p class="text-deep-charcoal/70 leading-relaxed">
-                            Using a professional scalp analyzer, we assess your scalp condition, identifying areas of concern, build-up, and specific needs for personalized treatment.
-                        </p>
-                    </div>
                 </div>
-                <div class="border-t border-champagne-gold/10"></div>
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="md:w-1/3">
-                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
-                            <span class="font-serif text-2xl text-champagne-gold">2</span>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Deep Cleansing</h3>
-                        <p class="text-deep-charcoal/70 leading-relaxed">
-                            High-end products and gentle scaling fluid work together to deeply cleanse, removing build-up, dandruff, and impurities from your scalp and hair.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-champagne-gold/10"></div>
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="md:w-1/3">
-                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
-                            <span class="font-serif text-2xl text-champagne-gold">3</span>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Steam Therapy</h3>
-                        <p class="text-deep-charcoal/70 leading-relaxed">
-                            Warm steam opens pores and hair follicles, allowing the treatment products to penetrate deeply and maximize their effectiveness.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-champagne-gold/10"></div>
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="md:w-1/3">
-                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
-                            <span class="font-serif text-2xl text-champagne-gold">4</span>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Therapeutic Massage</h3>
-                        <p class="text-deep-charcoal/70 leading-relaxed">
-                            A soothing head massage releases tension, improves circulation, and enhances relaxation while the heavenly water fountain creates a serene atmosphere.
-                        </p>
-                    </div>
-                </div>
-                <div class="border-t border-champagne-gold/10"></div>
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="md:w-1/3">
-                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
-                            <span class="font-serif text-2xl text-champagne-gold">5</span>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Herbal Infusion Rinse</h3>
-                        <p class="text-deep-charcoal/70 leading-relaxed">
-                            A calming herbal infusion rinse completes the ritual, leaving your scalp feeling light, breathable, and revitalized with a refreshed, serene sensation.
-                        </p>
+                
+                <!-- Right Column: Image -->
+                <div class="w-full lg:w-1/2 order-first lg:order-last">
+                    <div class="h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=1600&fit=crop&q=80" alt="Luxury Spa Interior" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-placeholder w-full h-full hidden"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal">Frequently Asked Questions</h2>
-            <div class="space-y-8">
-                <div class="border-b border-champagne-gold/10 pb-8">
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">How often should I get a Korean Head Spa treatment?</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">
-                        For optimal results, we recommend a Korean Head Spa treatment every 4-6 weeks. This allows your scalp to maintain its health and your hair to continue growing strong and healthy.
-                    </p>
+    <!-- Instagram Grid -->
+    <section class="py-24 md:py-32 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal text-center">Follow Our Journey</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=800&fit=crop&q=80" alt="Spa Treatment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
                 </div>
-                <div class="border-b border-champagne-gold/10 pb-8">
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Is the treatment suitable for all hair types?</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">
-                        Yes, our Korean Head Spa treatment is suitable for all hair types and textures. The treatment is customized based on your scalp analysis to address your specific needs.
-                    </p>
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=800&fit=crop&q=80" alt="Facial Treatment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
                 </div>
-                <div class="border-b border-champagne-gold/10 pb-8">
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Will my hair feel greasy after the treatment?</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">
-                        No, your hair will feel clean, light, and refreshed. The treatment removes excess oil and build-up, leaving your scalp and hair feeling breathable and revitalized.
-                    </p>
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&h=800&fit=crop&q=80" alt="Skincare" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
                 </div>
-                <div class="pb-8">
-                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Can I style my hair after the treatment?</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">
-                        Yes, you can style your hair immediately after the treatment. Your hair will be clean and ready for styling, with enhanced volume and shine from the deep cleansing and conditioning.
-                    </p>
-                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/mahibeautyandheadspaa/?hl=en" target="_blank" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
+                    View on Instagram
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Sticky Booking Button (Mobile) -->
-    <div id="sticky-booking" class="md:hidden fixed bottom-0 left-0 right-0 bg-ivory border-t border-champagne-gold/20 p-4 z-40 shadow-lg">
-        <a href="booking.html" class="block w-full border border-champagne-gold bg-champagne-gold text-ivory px-6 py-4 text-center text-sm uppercase tracking-wider hover:bg-champagne-gold/90 transition-all">
+    <!-- Sticky Footer Booking Button (Mobile) -->
+    <div id="sticky-footer-booking" class="md:hidden fixed bottom-0 left-0 right-0 bg-ivory border-t border-champagne-gold/20 p-4 z-50 shadow-lg">
+        <a href="booking.html" class="block w-full border border-champagne-gold bg-champagne-gold text-ivory px-6 py-4 text-center text-sm uppercase tracking-wider hover:bg-champagne-gold/90 transition-all font-medium">
             Book Appointment
         </a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-deep-charcoal text-ivory py-16 border-t border-champagne-gold/20 mt-24 md:mt-0">
+    <footer class="bg-deep-charcoal text-ivory py-16 border-t border-champagne-gold/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-12 w-12 object-contain">
+                    <div class="mb-4">
                         <h3 class="font-serif text-2xl font-light text-champagne-gold">Mahi Beauty & Head Spa</h3>
                     </div>
                     <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
