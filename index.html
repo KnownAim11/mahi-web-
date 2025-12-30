@@ -95,7 +95,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-6">
                 <a href="index.html" class="flex items-center space-x-3" id="nav-logo">
-                    <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-10 w-10 md:h-12 md:w-12 object-contain">
                     <span class="font-serif text-2xl font-light text-ivory">Mahi Beauty & Head Spa</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
@@ -177,34 +176,48 @@
         </div>
     </section>
 
-    <!-- Trust Bar -->
+    <!-- Trust Bar / Boutique Difference -->
     <section class="py-16 md:py-24 border-t border-b border-champagne-gold/10 bg-ivory">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-12 md:gap-16">
-                <div class="text-center">
-                    <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l2-2m-2 2l2 2m7-2l2 2m-2-2l2-2m-2 2l-2 2m2-2l-2-2M3 12l2 2m0 0l2 2m-2-2l-2-2m7 2l-2-2m2 2l2 2"></path>
-                        </svg>
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <!-- Left Column: Text Content -->
+                <div class="w-full lg:w-1/2 lg:pr-8">
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-12 text-deep-charcoal">The Boutique Difference</h2>
+                    <div class="grid md:grid-cols-3 lg:grid-cols-1 gap-8 md:gap-12">
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l2-2m-2 2l2 2m7-2l2 2m-2-2l2-2m-2 2l-2 2m2-2l-2-2M3 12l2 2m0 0l2 2m-2-2l-2-2m7 2l-2-2m2 2l2 2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Private Suite</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">An intimate, personalized experience in our exclusive boutique studio</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <span class="font-serif text-2xl text-champagne-gold">20+</span>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Years Experience</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">Two decades of mastery in Korean scalp and skin transformation</p>
+                        </div>
+                        <div>
+                            <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V17a2 2 0 00-2-2h-2a2 2 0 00-2 2v1.469a3.374 3.374 0 00-1.172-1.122l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Korean Products</h3>
+                            <p class="text-deep-charcoal/70 leading-relaxed">Medical-grade Korean formulations for unparalleled results</p>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Private Suite</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">An intimate, personalized experience in our exclusive boutique studio</p>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mx-auto mb-6">
-                        <span class="font-serif text-2xl text-champagne-gold">20+</span>
+                
+                <!-- Right Column: Image -->
+                <div class="w-full lg:w-1/2 order-first lg:order-last">
+                    <div class="h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=1600&fit=crop&q=80" alt="Luxury Spa Interior" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="image-placeholder w-full h-full hidden"></div>
                     </div>
-                    <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Years Experience</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">Two decades of mastery in Korean scalp and skin transformation</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-champagne-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V17a2 2 0 00-2-2h-2a2 2 0 00-2 2v1.469a3.374 3.374 0 00-1.172-1.122l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-serif text-2xl md:text-3xl font-light mb-4 text-deep-charcoal">Korean Products</h3>
-                    <p class="text-deep-charcoal/70 leading-relaxed">Medical-grade Korean formulations for unparalleled results</p>
                 </div>
             </div>
         </div>
@@ -214,13 +227,19 @@
     <section class="py-24 md:py-32 border-t border-champagne-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal text-center">Follow Our Journey</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=800&fit=crop&q=80" alt="Spa Treatment" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=800&fit=crop&q=80" alt="Facial Treatment" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
-                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&h=800&fit=crop&q=80" alt="Skincare" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=800&fit=crop&q=80" alt="Beauty Treatment" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
-                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=800&fit=crop&q=80" alt="Relaxation" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop&q=80" alt="Wellness" class="aspect-square object-cover w-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"><div class="aspect-square image-placeholder hidden"></div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=800&fit=crop&q=80" alt="Spa Treatment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=800&fit=crop&q=80" alt="Facial Treatment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
+                </div>
+                <div class="aspect-square overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&h=800&fit=crop&q=80" alt="Skincare" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="aspect-square image-placeholder hidden"></div>
+                </div>
             </div>
             <div class="text-center mt-12">
                 <a href="https://www.instagram.com/mahibeautyandheadspaa/?hl=en" target="_blank" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
@@ -242,8 +261,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-12 w-12 object-contain">
+                    <div class="mb-4">
                         <h3 class="font-serif text-2xl font-light text-champagne-gold">Mahi Beauty & Head Spa</h3>
                     </div>
                     <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
@@ -274,4 +292,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
