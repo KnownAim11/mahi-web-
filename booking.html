@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Session | Mahi Beauty & Head Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#F9F8F5',
+                        'champagne-gold': '#D4AF37',
+                        'deep-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            filter: invert(0.5);
+        }
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    </style>
+</head>
+<body class="bg-ivory text-deep-charcoal">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ivory/90 backdrop-blur-sm border-b border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <a href="index.html" class="font-serif text-2xl font-light text-deep-charcoal">Mahi Beauty & Head Spa</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Home</a>
+                    <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Head Spa</a>
+                    <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Skincare</a>
+                    <a href="about.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">About</a>
+                    <a href="booking.html" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory border-t border-champagne-gold/10">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Home</a>
+                <a href="korean-head-spa.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Head Spa</a>
+                <a href="advanced-skincare.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Skincare</a>
+                <a href="about.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">About</a>
+                <a href="booking.html" class="block border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-center text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Form Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="font-serif text-5xl md:text-6xl font-light mb-6 text-deep-charcoal">Book Your Session</h1>
+                <p class="text-lg text-deep-charcoal/70">Reserve your private appointment at our boutique studio</p>
+            </div>
+
+            <form id="booking-form" class="bg-ivory border border-champagne-gold/20 p-8 md:p-12 space-y-8">
+                <!-- Personal Information -->
+                <div class="space-y-6">
+                    <h2 class="font-serif text-2xl font-light mb-6 text-deep-charcoal border-b border-champagne-gold/20 pb-3">Personal Information</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans" placeholder="Your first name">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans" placeholder="Your last name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Email Address *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans" placeholder="your.email@example.com">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans" placeholder="(713) 555-0123">
+                    </div>
+                </div>
+
+                <!-- Service Selection -->
+                <div class="space-y-6 pt-8 border-t border-champagne-gold/20">
+                    <h2 class="font-serif text-2xl font-light mb-6 text-deep-charcoal">Service Selection</h2>
+                    
+                    <div>
+                        <label for="service" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Select Service *</label>
+                        <select id="service" name="service" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans">
+                            <option value="">Choose a service...</option>
+                            <optgroup label="Head Spa Rituals">
+                                <option value="deluxe-scalp-detox">Deluxe Scalp Detox - Starting at $167</option>
+                                <option value="facial-head-spa-bundle">Facial + Head Spa Bundle - $284</option>
+                            </optgroup>
+                            <optgroup label="Advanced Skincare">
+                                <option value="korean-peptide-infusion">Korean PEPTIDE Infusion - $230</option>
+                                <option value="korean-24k-gold-facial">Korean 24k Gold Facial - $185</option>
+                                <option value="buccal-facial">Buccal Facial - $185</option>
+                                <option value="korean-v-line-facial">Korean V Line Facial - $167</option>
+                                <option value="korean-oxy-jet-facial">Korean Oxy-Jet Facial - $167</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Date & Time Selection -->
+                <div class="space-y-6 pt-8 border-t border-champagne-gold/20">
+                    <h2 class="font-serif text-2xl font-light mb-6 text-deep-charcoal">Date & Time</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="date" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required min="" class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans">
+                        </div>
+                        <div>
+                            <label for="time" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Preferred Time *</label>
+                            <select id="time" name="time" required class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans">
+                                <option value="">Select time...</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Notes -->
+                <div class="pt-8 border-t border-champagne-gold/20">
+                    <label for="notes" class="block text-sm uppercase tracking-wider text-deep-charcoal/70 mb-2 font-sans">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="4" class="w-full px-4 py-3 border border-champagne-gold/30 bg-ivory text-deep-charcoal focus:outline-none focus:border-champagne-gold transition-colors font-sans resize-none" placeholder="Any special requests or concerns?"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-8 border-t border-champagne-gold/20">
+                    <button type="submit" class="w-full md:w-auto border border-champagne-gold bg-champagne-gold text-deep-charcoal px-12 py-4 text-sm uppercase tracking-wider hover:bg-champagne-gold/90 transition-all font-medium">
+                        Submit Booking Request
+                    </button>
+                    <p class="text-sm text-deep-charcoal/60 mt-4 font-sans">* Required fields. We'll confirm your appointment within 24 hours.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal text-ivory py-16 border-t border-champagne-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-serif text-2xl font-light mb-4 text-champagne-gold">Mahi Beauty & Head Spa</h3>
+                    <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Home</a></li>
+                        <li><a href="korean-head-spa.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Head Spa</a></li>
+                        <li><a href="advanced-skincare.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Skincare</a></li>
+                        <li><a href="about.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.instagram.com/mahibeautyandheadspaa/?hl=en" target="_blank" class="text-ivory/70 hover:text-champagne-gold transition-colors">Instagram</a></li>
+                        <li><a href="booking.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-champagne-gold/20 pt-8 text-center text-sm text-ivory/50">
+                <p>&copy; 2024 Mahi Beauty & Head Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+
+            // Form submission handler
+            document.getElementById('booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Here you would typically send this to a server
+                // For now, we'll show a success message
+                alert('Thank you for your booking request! We will contact you within 24 hours to confirm your appointment.\n\n' +
+                      'Name: ' + data.firstName + ' ' + data.lastName + '\n' +
+                      'Email: ' + data.email + '\n' +
+                      'Service: ' + data.service + '\n' +
+                      'Date: ' + data.date + '\n' +
+                      'Time: ' + data.time);
+                
+                // Reset form
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+

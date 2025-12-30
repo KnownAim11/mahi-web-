@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Menu | Mahi Beauty & Head Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#F9F8F5',
+                        'champagne-gold': '#D4AF37',
+                        'deep-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+        .service-overlap {
+            position: relative;
+        }
+        .service-image-overlap {
+            position: relative;
+            z-index: 1;
+        }
+        .service-text-overlap {
+            position: relative;
+            z-index: 2;
+            margin-top: -80px;
+            background: rgba(249, 248, 245, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        @media (max-width: 768px) {
+            .service-text-overlap {
+                margin-top: -40px;
+            }
+        }
+        .special-offer-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #D4AF37;
+            color: #F9F8F5;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-ivory text-deep-charcoal">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ivory/90 backdrop-blur-sm border-b border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <a href="index.html" class="font-serif text-2xl font-light text-deep-charcoal">Mahi Beauty & Head Spa</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Home</a>
+                    <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Head Spa</a>
+                    <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Skincare</a>
+                    <a href="about.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">About</a>
+                    <a href="booking.html" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory border-t border-champagne-gold/10">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Home</a>
+                <a href="korean-head-spa.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Head Spa</a>
+                <a href="advanced-skincare.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Skincare</a>
+                <a href="about.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">About</a>
+                <a href="booking.html" class="block border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-center text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-deep-charcoal leading-tight">Treatment Menu</h1>
+            <p class="text-lg md:text-xl text-deep-charcoal/70 max-w-2xl mx-auto leading-relaxed">Discover our comprehensive range of Korean-inspired treatments designed to transform your scalp, skin, and overall wellness.</p>
+        </div>
+    </section>
+
+    <!-- Scalp & Hair Category -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-deep-charcoal">Scalp & Hair</h2>
+                <div class="h-px w-24 bg-champagne-gold"></div>
+            </div>
+            
+            <div class="space-y-24 md:space-y-32">
+                <!-- Service 1: Deluxe Scalp Detox - Image Left, Text Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-image-overlap">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&h=800&fit=crop&q=80" alt="Deluxe Scalp Detox" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                    <div class="service-text-overlap p-8 md:p-12">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Deluxe Scalp Detox</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Deep cleaning scalp detox using scalp analyzer, high-end products, and gentle scaling fluid with heavenly water fountain for deep relaxation.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">75 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">Starting at $167</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Facial + Head Spa Bundle - Text Left, Image Right (Special Offer) -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center relative">
+                    <div class="special-offer-tag">Special Offer</div>
+                    <div class="service-text-overlap p-8 md:p-12 order-2 md:order-1">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Facial + Head Spa Bundle</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Ultimate deep cleanse facial & scalp detox combo. Includes 75-min facial with dermaplaning and LED therapy, plus 75-min scalp detox.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">165 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <span class="text-deep-charcoal/50 line-through text-xl font-sans">$334</span>
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$284</p>
+                            <span class="text-sm text-deep-charcoal/60 font-sans">Save $50</span>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                    <div class="service-image-overlap order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&h=800&fit=crop&q=80" alt="Facial + Head Spa Bundle" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Face & Skin Category -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-deep-charcoal">Face & Skin</h2>
+                <div class="h-px w-24 bg-champagne-gold"></div>
+            </div>
+            
+            <div class="space-y-24 md:space-y-32">
+                <!-- Service 1: Korean PEPTIDE Infusion - Image Left, Text Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-image-overlap">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&h=800&fit=crop&q=80" alt="Korean PEPTIDE Infusion" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                    <div class="service-text-overlap p-8 md:p-12">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Korean 'PEPTIDE' Infusion</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Korean collagen stem cell booster infusion with micro-needling. Medical-grade collagen peptides, stem cells, and 53+ vitamins for unparalleled skin renewal.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">75 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$230</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Korean 24k Gold Facial - Text Left, Image Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-text-overlap p-8 md:p-12 order-2 md:order-1">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Korean 24k Gold Facial</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">24K Gold Korean Deluxe Facial with Derma-Planing & LED Therapy. Brightens, smooths fine lines, and leaves skin radiant and luminous.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">75 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$185</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                    <div class="service-image-overlap order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=800&fit=crop&q=80" alt="Korean 24k Gold Facial" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                </div>
+
+                <!-- Service 3: Buccal Facial - Image Left, Text Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-image-overlap">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&h=800&fit=crop&q=80" alt="Buccal Facial" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                    <div class="service-text-overlap p-8 md:p-12">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Buccal Facial</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Non-invasive facelift technique working inside the mouth to release tension, tone facial muscles, and improve circulation for a lifted, contoured look.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">90 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$185</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Korean V Line Facial - Text Left, Image Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-text-overlap p-8 md:p-12 order-2 md:order-1">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Korean V Line Facial</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Traditional Korean skincare techniques to reduce lines and wrinkles, resulting in smoother, firmer, and more youthful complexion.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">75 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$167</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                    <div class="service-image-overlap order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&h=800&fit=crop&q=80" alt="Korean V Line Facial" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                </div>
+
+                <!-- Service 5: Korean Oxy-Jet Facial - Image Left, Text Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-image-overlap">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=800&fit=crop&q=80" alt="Korean Oxy-Jet Facial" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                    <div class="service-text-overlap p-8 md:p-12">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Korean Oxy-Jet Facial</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Korean oxygen mask facial treatment that brightens and soothes skin. The oxygen bubble mask infusion leads to fresh, youthful feeling skin.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">75 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">$167</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Body & Wellness Category -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-light mb-4 text-deep-charcoal">Body & Wellness</h2>
+                <div class="h-px w-24 bg-champagne-gold"></div>
+            </div>
+            
+            <div class="space-y-24 md:space-y-32">
+                <!-- Service: Lymphatic Drainage Massage - Image Left, Text Right -->
+                <div class="service-overlap grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="service-image-overlap">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&h=800&fit=crop&q=80" alt="Lymphatic Drainage Massage" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                    <div class="service-text-overlap p-8 md:p-12">
+                        <h3 class="font-serif text-3xl md:text-4xl font-light mb-4 text-deep-charcoal">Lymphatic Drainage Massage</h3>
+                        <p class="text-base md:text-lg text-deep-charcoal/70 mb-6 leading-relaxed font-sans">Gentle massage technique that helps reduce swelling and improve circulation by moving lymph fluid throughout the body.</p>
+                        <p class="text-sm text-deep-charcoal/60 mb-6 uppercase tracking-wider font-sans">60 min</p>
+                        <div class="flex items-baseline gap-4 mb-8">
+                            <p class="font-serif text-3xl md:text-4xl text-champagne-gold">Starting at $150</p>
+                        </div>
+                        <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all font-sans">
+                            Reserve Your Session
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Booking Button (Mobile) -->
+    <div id="sticky-footer-booking" class="md:hidden fixed bottom-0 left-0 right-0 bg-ivory border-t border-champagne-gold/20 p-4 z-50 shadow-lg">
+        <a href="booking.html" class="block w-full border border-champagne-gold bg-champagne-gold text-ivory px-6 py-4 text-center text-sm uppercase tracking-wider hover:bg-champagne-gold/90 transition-all font-medium">
+            Reserve Your Session
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal text-ivory py-16 border-t border-champagne-gold/20 mt-24 md:mt-0 pb-24 md:pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-serif text-2xl font-light mb-4 text-champagne-gold">Mahi Beauty & Head Spa</h3>
+                    <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Home</a></li>
+                        <li><a href="korean-head-spa.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Head Spa</a></li>
+                        <li><a href="advanced-skincare.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Skincare</a></li>
+                        <li><a href="about.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.instagram.com/mahibeautyandheadspaa/?hl=en" target="_blank" class="text-ivory/70 hover:text-champagne-gold transition-colors">Instagram</a></li>
+                        <li><a href="booking.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-champagne-gold/20 pt-8 text-center text-sm text-ivory/50">
+                <p>&copy; 2024 Mahi Beauty & Head Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

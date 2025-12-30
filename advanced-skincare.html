@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Skincare | Mahi Beauty & Head Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#F9F8F5',
+                        'champagne-gold': '#D4AF37',
+                        'deep-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+        .image-placeholder {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-ivory text-deep-charcoal">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ivory/90 backdrop-blur-sm border-b border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <a href="index.html" class="font-serif text-2xl font-light text-deep-charcoal">Mahi Beauty & Head Spa</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Home</a>
+                    <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">Head Spa</a>
+                    <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-champagne-gold">Skincare</a>
+                    <a href="about.html" class="text-sm uppercase tracking-wider text-deep-charcoal hover:text-champagne-gold transition-colors">About</a>
+                    <a href="booking.html" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                    <span class="w-6 h-px bg-deep-charcoal transition-all"></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory border-t border-champagne-gold/10">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Home</a>
+                <a href="korean-head-spa.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Head Spa</a>
+                <a href="advanced-skincare.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">Skincare</a>
+                <a href="about.html" class="block text-sm uppercase tracking-wider text-deep-charcoal">About</a>
+                <a href="booking.html" class="block border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-center text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Buccal Facial Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-0">
+            <div class="h-[60vh] md:h-[80vh] relative overflow-hidden order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&h=800&fit=crop&q=80" alt="Buccal Facial & Lymphatic Drainage" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="image-placeholder w-full h-full hidden"></div>
+            </div>
+            <div class="flex items-center px-8 md:px-12 lg:px-16 py-12 md:py-0 bg-ivory relative md:-ml-16 z-10 order-1 md:order-2">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-6 text-deep-charcoal">Buccal Facial & Lymphatic Drainage</h2>
+                    <p class="text-lg text-deep-charcoal/70 mb-6 leading-relaxed">
+                        Perfect for anyone seeking a non-invasive facelift, relief from TMJ tension, or a refreshed, sculpted appearance. This advanced facial technique works inside the mouth to release tension, tone facial muscles, and improve circulation.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <ul class="space-y-3 text-deep-charcoal/70">
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Non-surgical facelift effect</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Relieves TMJ and jaw tension</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Lifts and tones facial muscles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Enhances circulation and natural glow</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <p class="font-serif text-2xl text-champagne-gold">$185</p>
+                        <p class="text-deep-charcoal/60">90 minutes</p>
+                    </div>
+                    <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
+                        Reserve Your Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dermaplaning Section -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-0">
+            <div class="flex items-center px-8 md:px-12 lg:px-16 py-12 md:py-0 bg-ivory relative md:-mr-16 z-10">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-6 text-deep-charcoal">Advanced Dermaplaning</h2>
+                    <p class="text-lg text-deep-charcoal/70 mb-6 leading-relaxed">
+                        Part of our signature treatments, advanced dermaplaning combines with our Korean 24k Gold Facial and Deep Cleanse Facial. This precise exfoliation technique removes dead skin cells and fine facial hair, revealing smoother, brighter skin.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <ul class="space-y-3 text-deep-charcoal/70">
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Removes dead skin cells and vellus hair</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Reveals smoother, brighter complexion</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Enhances product absorption</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Creates flawless makeup application</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-deep-charcoal/60 mb-8">Included in select facials</p>
+                        <a href="https://mahimalik.glossgenius.com/services" target="_blank" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
+                            Reserve Your Session
+                        </a>
+                </div>
+            </div>
+            <div class="h-[60vh] md:h-[80vh] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&h=800&fit=crop&q=80" alt="Advanced Dermaplaning" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="image-placeholder w-full h-full hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Korean PEPTIDE Infusion -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-0">
+            <div class="h-[60vh] md:h-[80vh] relative overflow-hidden order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&h=800&fit=crop&q=80" alt="Korean PEPTIDE Infusion" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="image-placeholder w-full h-full hidden"></div>
+            </div>
+            <div class="flex items-center px-8 md:px-12 lg:px-16 py-12 md:py-0 bg-ivory relative md:-ml-16 z-10 order-1 md:order-2">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-5xl font-light mb-6 text-deep-charcoal">Korean 'PEPTIDE' Infusion</h2>
+                    <p class="text-lg text-deep-charcoal/70 mb-6 leading-relaxed">
+                        A high-end Korean spa protocol, now available in the USA exclusively with Mahi. This advanced treatment combines micro-needling using Korean medical-grade collagen peptides, stem cells, hyaluronic acid, and a potent blend of 53+ vitamins, amino acids, and antioxidants for unparalleled skin renewal.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Benefits</h3>
+                        <ul class="space-y-3 text-deep-charcoal/70">
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Smooths acne scars and pitted texture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Brightens hyperpigmentation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Minimizes pores and refines texture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-champagne-gold mr-3">•</span>
+                                <span>Stimulates collagen production</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <p class="font-serif text-2xl text-champagne-gold">$230</p>
+                        <p class="text-deep-charcoal/60">75 minutes</p>
+                    </div>
+                    <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-deep-charcoal hover:bg-champagne-gold hover:text-ivory transition-all">
+                        Reserve Your Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Skincare Ritual -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10 bg-ivory">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal">The Skincare Ritual</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3">
+                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
+                            <span class="font-serif text-2xl text-champagne-gold">01</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Bespoke Skin Analysis</h3>
+                        <p class="text-deep-charcoal/70 leading-relaxed">
+                            We begin by evaluating your skin's unique biology and barrier health to curate a personalized treatment path.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-champagne-gold/10"></div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3">
+                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
+                            <span class="font-serif text-2xl text-champagne-gold">02</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Traditional Korean Double Cleanse</h3>
+                        <p class="text-deep-charcoal/70 leading-relaxed">
+                            A two-phase purification process that removes impurities while maintaining your skin's natural pH and moisture levels.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-champagne-gold/10"></div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3">
+                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
+                            <span class="font-serif text-2xl text-champagne-gold">03</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">Targeted Resurfacing</h3>
+                        <p class="text-deep-charcoal/70 leading-relaxed">
+                            Whether through Dermaplaning or gentle enzymatic exfoliation, we remove dead skin cells to prepare for deep infusion.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-champagne-gold/10"></div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3">
+                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
+                            <span class="font-serif text-2xl text-champagne-gold">04</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">The Core Transformation</h3>
+                        <p class="text-deep-charcoal/70 leading-relaxed">
+                            Depending on your goal, we perform either the deep-tissue Buccal facial massage or the advanced Korean Peptide Stem Cell infusion.
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-champagne-gold/10"></div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="md:w-1/3">
+                        <div class="w-16 h-16 border border-champagne-gold flex items-center justify-center mb-4">
+                            <span class="font-serif text-2xl text-champagne-gold">05</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="font-serif text-3xl font-light mb-4 text-deep-charcoal">The "Glass Skin" Seal</h3>
+                        <p class="text-deep-charcoal/70 leading-relaxed">
+                            The ritual concludes with a customized finishing protocol to lock in nutrients and provide an instant, radiant glow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Skincare FAQ -->
+    <section class="py-16 md:py-24 border-t border-champagne-gold/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-5xl md:text-6xl font-light mb-16 text-deep-charcoal">Advanced Skincare FAQ</h2>
+            <div class="space-y-8">
+                <div class="border-b border-champagne-gold/10 pb-8">
+                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Is the Buccal Facial massage painful?</h3>
+                    <p class="text-deep-charcoal/70 leading-relaxed">
+                        Not at all. While the technique involves intra-oral massage to release deep muscle tension, it is highly therapeutic and relaxing. Most clients find the sculpting effect very soothing.
+                    </p>
+                </div>
+                <div class="border-b border-champagne-gold/10 pb-8">
+                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Is there any downtime after the treatment?</h3>
+                    <p class="text-deep-charcoal/70 leading-relaxed">
+                        No. Our Korean techniques focus on barrier repair and gentle transformation. You will leave with a "Glass Skin" glow and can return to your daily activities immediately.
+                    </p>
+                </div>
+                <div class="border-b border-champagne-gold/10 pb-8">
+                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">How often should I book an Advanced Skincare session?</h3>
+                    <p class="text-deep-charcoal/70 leading-relaxed">
+                        For optimal results, particularly with Lymphatic Drainage and Peptide infusions, we recommend a session every 4 to 6 weeks to maintain skin health and muscle tone.
+                    </p>
+                </div>
+                <div class="pb-8">
+                    <h3 class="font-serif text-2xl font-light mb-4 text-deep-charcoal">Are these treatments safe for sensitive skin?</h3>
+                    <p class="text-deep-charcoal/70 leading-relaxed">
+                        Absolutely. Mahi's 20+ years of experience allows her to adapt every ritual for even the most reactive skin types using hypoallergenic, medical-grade Korean products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Booking Button (Mobile) -->
+    <div id="sticky-booking" class="md:hidden fixed bottom-0 left-0 right-0 bg-ivory border-t border-champagne-gold/20 p-4 z-40 shadow-lg">
+        <a href="booking.html" class="block w-full border border-champagne-gold bg-champagne-gold text-ivory px-6 py-4 text-center text-sm uppercase tracking-wider hover:bg-champagne-gold/90 transition-all">
+            Book Appointment
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal text-ivory py-16 border-t border-champagne-gold/20 mt-24 md:mt-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-serif text-2xl font-light mb-4 text-champagne-gold">Mahi Beauty & Head Spa</h3>
+                    <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Home</a></li>
+                        <li><a href="korean-head-spa.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Head Spa</a></li>
+                        <li><a href="advanced-skincare.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Skincare</a></li>
+                        <li><a href="about.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-light mb-4 text-champagne-gold uppercase tracking-wider">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.instagram.com/mahibeautyandheadspaa/?hl=en" target="_blank" class="text-ivory/70 hover:text-champagne-gold transition-colors">Instagram</a></li>
+                        <li><a href="booking.html" class="text-ivory/70 hover:text-champagne-gold transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-champagne-gold/20 pt-8 text-center text-sm text-ivory/50">
+                <p>&copy; 2024 Mahi Beauty & Head Spa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
