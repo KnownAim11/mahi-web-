@@ -116,13 +116,16 @@
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-6">
-                <div class="font-serif text-2xl font-light text-ivory" id="nav-logo">Mahi Beauty & Head Spa</div>
+                <a href="index.html" class="flex items-center space-x-3" id="nav-logo">
+                    <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-10 w-10 md:h-12 md:w-12 object-contain">
+                    <span class="font-serif text-2xl font-light text-ivory">Mahi Beauty & Head Spa</span>
+                </a>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Home</a>
                     <a href="korean-head-spa.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Head Spa</a>
                     <a href="advanced-skincare.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">Skincare</a>
                     <a href="about.html" class="text-sm uppercase tracking-wider text-ivory hover:text-champagne-gold transition-colors" id="nav-link">About</a>
-                    <a href="booking.html" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-ivory hover:bg-champagne-gold hover:text-deep-charcoal transition-all">Book</a>
+                    <a href="booking.html" id="nav-book-btn" class="border border-champagne-gold px-6 py-2 text-sm uppercase tracking-wider text-ivory hover:bg-champagne-gold hover:text-deep-charcoal transition-all font-medium">Book</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
                     <span class="w-6 h-px bg-ivory transition-all"></span>
@@ -151,12 +154,9 @@
         <div class="hero-overlay"></div>
         <!-- Content -->
         <div class="hero-content-wrapper w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-4 text-ivory tracking-tight fade-in">
-                20 Years of Mastery.
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8 text-ivory tracking-tight fade-in">
+                Houston's Premier Korean Head Spa <br class="hidden md:block"> Advanced Skincare Studio
             </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl text-ivory/90 mb-8 font-light fade-in" style="animation-delay: 0.2s; animation-fill-mode: both;">
-                Your Private Sanctuary for Korean Scalp & Skin Mastery in Houston.
-            </p>
             <a href="booking.html" class="inline-block border border-champagne-gold px-8 py-3 text-sm uppercase tracking-wider text-ivory hover:bg-champagne-gold hover:text-deep-charcoal transition-all fade-in" style="animation-delay: 0.3s; animation-fill-mode: both;">
                 Book Your Experience
             </a>
@@ -264,7 +264,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
-                    <h3 class="font-serif text-2xl font-light mb-4 text-champagne-gold">Mahi Beauty & Head Spa</h3>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/logo/logo.jpg" alt="Mahi Beauty & Head Spa" class="h-12 w-12 object-contain">
+                        <h3 class="font-serif text-2xl font-light text-champagne-gold">Mahi Beauty & Head Spa</h3>
+                    </div>
                     <p class="text-ivory/60 text-sm">Houston's Destination for Korean Scalp & Skin Transformation</p>
                 </div>
                 <div>
