@@ -41,6 +41,7 @@ if (mobileMenu) {
 const navbar = document.getElementById('navbar');
 const navLogo = document.getElementById('nav-logo');
 const navLinks = document.querySelectorAll('#nav-link');
+const navBookBtn = document.getElementById('nav-book-btn');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
@@ -52,15 +53,33 @@ window.addEventListener('scroll', () => {
             navbar.style.background = 'transparent';
             navbar.style.borderBottom = 'none';
             // Keep text white on video background
-            if (navLogo) navLogo.style.color = '#F9F8F5';
+            if (navLogo) {
+                const logoSpan = navLogo.querySelector('span');
+                if (logoSpan) logoSpan.style.color = '#F9F8F5';
+            }
             navLinks.forEach(link => link.style.color = '#F9F8F5');
+            // Keep Book button visible with white text and gold border
+            if (navBookBtn) {
+                navBookBtn.style.color = '#F9F8F5';
+                navBookBtn.style.borderColor = '#D4AF37';
+                navBookBtn.style.backgroundColor = 'transparent';
+            }
         } else {
-            navbar.style.background = 'rgba(249, 248, 245, 0.9)';
+            navbar.style.background = 'rgba(249, 248, 245, 0.95)';
             navbar.style.backdropFilter = 'blur(10px)';
             navbar.style.borderBottom = '1px solid rgba(212, 175, 55, 0.1)';
             // Change text to dark when scrolled
-            if (navLogo) navLogo.style.color = '#2D2D2D';
+            if (navLogo) {
+                const logoSpan = navLogo.querySelector('span');
+                if (logoSpan) logoSpan.style.color = '#2D2D2D';
+            }
             navLinks.forEach(link => link.style.color = '#2D2D2D');
+            // Make Book button stand out with gold background on scroll
+            if (navBookBtn) {
+                navBookBtn.style.color = '#2D2D2D';
+                navBookBtn.style.borderColor = '#D4AF37';
+                navBookBtn.style.backgroundColor = '#D4AF37';
+            }
         }
     }
     
@@ -71,9 +90,20 @@ window.addEventListener('scroll', () => {
 if (navbar) {
     const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
     if (!isHomePage && window.pageYOffset < 100) {
-        navbar.style.background = 'rgba(249, 248, 245, 0.9)';
+        navbar.style.background = 'rgba(249, 248, 245, 0.95)';
         navbar.style.backdropFilter = 'blur(10px)';
         navbar.style.borderBottom = '1px solid rgba(212, 175, 55, 0.1)';
+        // Set initial colors for non-home pages
+        if (navLogo) {
+            const logoSpan = navLogo.querySelector('span');
+            if (logoSpan) logoSpan.style.color = '#2D2D2D';
+        }
+        navLinks.forEach(link => link.style.color = '#2D2D2D');
+        if (navBookBtn) {
+            navBookBtn.style.color = '#2D2D2D';
+            navBookBtn.style.borderColor = '#D4AF37';
+            navBookBtn.style.backgroundColor = '#D4AF37';
+        }
     }
 }
 
